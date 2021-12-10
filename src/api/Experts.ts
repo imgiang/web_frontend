@@ -1,9 +1,9 @@
 import axios from 'axios'
 import Expert from '~/model/Expert'
 
-const apiUrl = 'http://101.96.66.219:8005/api/experts'
+const apiUrl = 'experts'
 
-export const getExperts = async (page = 0, size = 20, sort = 'name', desc = false): Promise<Expert[] | undefined> => {
+export const getExperts = async (page = 0, size = 20, sort = 'name', desc = false): Promise<Expert[]> => {
   try {
     const res = await axios.get(apiUrl, {
       params: {
@@ -15,6 +15,7 @@ export const getExperts = async (page = 0, size = 20, sort = 'name', desc = fals
     })
     return res.data
   } catch (error) {
+    return []
     // console.log(error)
   }
 }
