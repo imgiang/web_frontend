@@ -3,14 +3,14 @@ import Expert from '~/model/Expert'
 
 const apiUrl = 'experts'
 
-export const getExperts = async (page = 0, size = 20, sort = 'name', desc = false): Promise<Expert[]> => {
+export const getExperts = async (page = 0, size = 20, sort = 'name', asc = true): Promise<Expert[]> => {
   try {
     const res = await axios.get(apiUrl, {
       params: {
         page,
         size,
         sort,
-        desc
+        asc
       }
     })
     return res.data
@@ -29,11 +29,12 @@ export const getExpertById = async (id: string): Promise<Expert | undefined> => 
   }
 }
 
-export const searchExperts = async (what: string): Promise<Expert[] | undefined> => {
+export const searchExperts = async (what: string): Promise<Expert[]> => {
   try {
-    const res = await axios.get(apiUrl, { params: { what } })
+    const res = await axios.get(`${apiUrl}/search`, { params: { what } })
     return res.data
   } catch (error) {
+    return []
     // console.log(error)
   }
 }
