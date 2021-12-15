@@ -25,7 +25,7 @@
     </el-row>
     <el-upload
       drag
-      action="https://essme.duckdns.org/api/backup"
+      :action="`${BASE_URL}/backup`"
       headers="{'Content-type': 'multipart/form-data'}"
       @success="uploadSuccess"
       @error="uploadError()"
@@ -42,6 +42,7 @@ import { ElMessage } from 'element-plus'
 import { Download, Delete, Upload } from '@element-plus/icons-vue'
 
 import * as Backup from '~/api/Backup'
+import { BASE_URL } from '~/constant'
 
 const listFile = ref<string[]>([])
 const choice = ref('')

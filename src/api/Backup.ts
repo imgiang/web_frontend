@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { BASE_URL } from '~/constant'
 
 export const createBackup = async (): Promise<string> => {
   try {
@@ -30,7 +31,7 @@ export const listBackup = async (): Promise<string[]> => {
 export const downloadBackup = (filename: string) => {
   const link = document.createElement('a')
   // need to update when deploy
-  link.href = `https://essme.duckdns.org/api/backup/download/${filename}`
+  link.href = `${BASE_URL}/backup/download/${filename}`
   link.target = '_blank'
   link.click()
 }
