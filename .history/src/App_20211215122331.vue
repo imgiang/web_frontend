@@ -23,7 +23,7 @@ import { ref, onMounted } from 'vue'
 import { getExperts, searchExperts } from '~/api/Experts'
 import Expert from './model/Expert'
 import avatar from '/avatar.jpg';
-import MainHome   from './components/Main.vue'
+import MainHome   from './c/Main/Main.vue'
 
 const experts = ref<Expert[]>([])
 const search = ref('')

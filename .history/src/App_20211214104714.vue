@@ -1,18 +1,18 @@
 <template>
-  <MainHome   />
+  <FormExpert />
   <BaseHeader />
   <img alt="Vue logo" class="element-plus-logo" src="./assets/logo.png" />
   <HelloWorld msg="Hello Vue 3.0 + Element Plus + Vite" />
-  <!-- <label for="search">Search</label>
-  <input id="search" v-model="search" @input="getSuggest" /> -->
+  <label for="search">Search</label>
+  <input id="search" v-model="search" @input="getSuggest" />
   <!-- <div v-for="expert in experts" :key="expert._id">
     <img :src="expert._source.thumbnail ? expert._source.thumbnail : avatar" :alt="expert._source.name + ' image'" />
     {{ expert._source.name }}
   </div> -->
-  <!-- <div v-for="expert in experts" :key="expert._id">
+  <div v-for="expert in experts" :key="expert._id">
     <img :src="expert._source.thumbnail ? expert._source.thumbnail : avatar" :alt="expert._source.name + ' image'" />
     {{ expert._source.name }}
-  </div> -->
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -23,7 +23,7 @@ import { ref, onMounted } from 'vue'
 import { getExperts, searchExperts } from '~/api/Experts'
 import Expert from './model/Expert'
 import avatar from '/avatar.jpg';
-import MainHome   from './components/Main.vue'
+import FormExpert   from './components/Main.vue'
 
 const experts = ref<Expert[]>([])
 const search = ref('')
