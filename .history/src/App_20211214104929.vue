@@ -1,5 +1,5 @@
 <template>
-  <MainHome   />
+  <FormExpert   />
   <BaseHeader />
   <img alt="Vue logo" class="element-plus-logo" src="./assets/logo.png" />
   <HelloWorld msg="Hello Vue 3.0 + Element Plus + Vite" />
@@ -23,7 +23,7 @@ import { ref, onMounted } from 'vue'
 import { getExperts, searchExperts } from '~/api/Experts'
 import Expert from './model/Expert'
 import avatar from '/avatar.jpg';
-import MainHome   from './components/Main.vue'
+import FormExpert   from './components/Main.vue'
 
 const experts = ref<Expert[]>([])
 const search = ref('')
