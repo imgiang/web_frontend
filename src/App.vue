@@ -1,8 +1,10 @@
 <template>
   <MainHome   />
-  <BaseHeader />
-  <img alt="Vue logo" class="element-plus-logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3.0 + Element Plus + Vite" />
+  
+  <!-- <BaseHeader /> -->
+  <!-- <img alt="Vue logo" class="element-plus-logo" src="./assets/logo.png" /> -->
+  <!-- <HelloWorld msg="Hello Vue 3.0 + Element Plus + Vite" /> -->
+
   <!-- <label for="search">Search</label>
   <input id="search" v-model="search" @input="getSuggest" /> -->
   <!-- <div v-for="expert in experts" :key="expert._id">
@@ -13,6 +15,7 @@
     <img :src="expert._source.thumbnail ? expert._source.thumbnail : avatar" :alt="expert._source.name + ' image'" />
     {{ expert._source.name }}
   </div> -->
+  <Footer />
 </template>
 
 <script setup lang="ts">
@@ -24,6 +27,8 @@ import { getExperts, searchExperts } from '~/api/Experts'
 import Expert from './model/Expert'
 import avatar from '/avatar.jpg';
 import MainHome   from './components/Main.vue'
+
+import Footer from './components/Footer.vue'
 
 const experts = ref<Expert[]>([])
 const search = ref('')
