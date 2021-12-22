@@ -14,6 +14,10 @@ import "~/styles/index.scss";
 // If you want to use ElMessage, import it.
 import "element-plus/theme-chalk/src/message.scss"
 
+import axios from 'axios';
+
+axios.defaults.baseURL = "https://essme.duckdns.org/api/"
+
 const app = createApp(App);
 // app.use(ElementPlus);
 app.mount("#app");

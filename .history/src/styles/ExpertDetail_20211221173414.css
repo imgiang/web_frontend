@@ -1,0 +1,24 @@
+.container{
+display: flex;
+margin: 20px;
+}
+.new-left{
+    background-color: rgb(231, 136, 12);
+    margin:15px;
+    flex:1;
+}
+.new-right{
+  
+    margin:20px; 
+     flex:3;
+}
+.item{
+    background-color: rgb(70, 185, 24);
+    margin-left:10px;
+}
+
+.item1{
+    background-color: rgb(70, 185, 24);
+    margin-top:10px;
+    margin-left:10px;
+}
