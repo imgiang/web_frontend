@@ -16,3 +16,12 @@ code {
   background-color: var(--el-color-primary-light-9);
   color: var(--el-color-primary);
 }
+.main{
+  position: absolute;
+  top: 473px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0px 4px 4px rgba(43, 29, 29, 0.25);
+  border-radius: 20px;
+  width: 95%;
+  left: 0.8cm;
+}

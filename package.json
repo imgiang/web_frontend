@@ -6,10 +6,16 @@
     "build": "vite build",
     "serve": "vite preview"
   },
+  
   "dependencies": {
+<<<<<<< HEAD
     "@element-plus/icons-vue": "^0.2.4",
+=======
+    "@fortawesome/fontawesome-free": "^5.15.4",
+>>>>>>> Huong
     "axios": "^0.24.0",
     "element-plus": "^1.2.0-beta.1",
+    "save": "^2.4.0",
     "vue": "^3.2.20"
   },
   "devDependencies": {

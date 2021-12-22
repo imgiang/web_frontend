@@ -2,25 +2,82 @@
   <div class="frm-expert">
     <div class="title-expert">Expert</div>
     <div class="container-expert">
-      <div v-for="expert in experts.slice(2, 10)" :key="expert._id">
-        <img
+        <div v-for="expert in experts.slice(2, 10)" :key="expert._id">
+          <div class="tooltip">
+<img
           :src="expert._source.thumbnail ? expert._source.thumbnail : avatar"
           :alt="expert._source.name + ' image'"
           class="img-expert"
         />
+         <span class="tooltiptext">
+         <table class="">
+          <tr border="5">
+           
+          </tr>
+          <tr>
+             <td class="textsub">{{expert._source.name}}</td>
+             <td class="textsub">This is the sub-detail of news.</td>
+              <td class="datenews">02-01-2021</td>
+            <td rowspan="2"><img
+          :src="expert._source.thumbnail ? expert._source.thumbnail : avatar"
+          :alt="expert._source.name + ' image'"
+          class="img-expertsub"
+        /></td>
+           
+           
+          </tr>
+        </table>
+        </span>
+          </div>
+        
         <!-- {{ expert._source.name }} -->
       </div>
       <a href="#" class="expert-detail">See more</a>
+       
     </div>
+     
   </div>
   <div class="frm-field">
     <div class="title-expert">Fields</div>
     <div class="container-field">
-      <div v-for="expert in 9" :key="expert">
-        <img src="/field.jpg" alt=" 'image'" class="img-field" />
-        <div class="text-field">Business</div>
-        <!-- {{ expert._source.name }} -->
+      <div>
+        <img src="/Fields/architect.jpg" alt=" 'image'" class="img-field" />
+        <div class="text-field">Architect</div>
       </div>
+      <div>
+        <img src="/Fields/Astronomy.jpg" alt=" 'image'" class="img-field" />
+        <div class="text-field">Astronomy</div>
+      </div>
+      <div>
+        <img src="/Fields/beauty salon.jpg" alt=" 'image'" class="img-field" />
+        <div class="text-field">Beauty salon</div>
+      </div>
+      <div>
+        <img src="/Fields/business.jpg" alt=" 'image'" class="img-field" />
+        <div class="text-field">Business</div>
+      </div>
+     
+      <div>
+        <img src="/Fields/dentist-office-min.jpg" alt=" 'image'" class="img-field" />
+        <div class="text-field">Dentist-office-min</div>
+      </div>
+      <div>
+        <img src="/Fields/education.jpg" alt=" 'image'" class="img-field" />
+        <div class="text-field">Education</div>
+      </div>
+      <div>
+        <img src="/Fields/infotech.jpg" alt=" 'image'" class="img-field" />
+        <div class="text-field">Infotech</div>
+      </div>
+      <div>
+        <img src="/Fields/restaurant.jpg" alt=" 'image'" class="img-field" />
+        <div class="text-field">Restaurant</div>
+      </div>
+      <div>
+        <img src="/Fields/biology.jpg" alt=" 'image'" class="img-field" />
+        <div class="text-field">Biology</div>
+      </div>
+      <!-- {{ expert._source.name }} -->
     </div>
     <a href="#" class="expert-detail detail">See more</a>
   </div>
@@ -30,16 +87,12 @@
       <div v-for="expert in 6" :key="expert">
         <table class="news">
           <tr border="5">
-            <td colspan="2" class="text-news" >This is a title of the news </td>
+            <td colspan="2" class="text-news">This is a title of the news</td>
           </tr>
           <tr>
-            <td rowspan="2">   <img
-          src="/news.jpg"
-          alt=" 'image'"
-          class="img-news"
-        /></td>
-            <td class=" textsub">This is the sub-detail of news.</td>
-            <td class=" datenews">02-01-2021</td>
+            <td rowspan="2"><img src="/news.jpg" alt=" 'image'" class="img-news" /></td>
+            <td class="textsub">This is the sub-detail of news.</td>
+            <td class="datenews">02-01-2021</td>
           </tr>
         </table>
 
@@ -54,16 +107,26 @@
     </div>
     <a href="#" class="expert-detail newsdetail">View all news</a>
   </div>
+  <HomeQuestion 
+
+  />
+   
 </template>
 
 <script setup lang="ts">
-import BaseHeader from './components/layouts/BaseHeader.vue'
-import HelloWorld from './components/HelloWorld.vue'
+
 import { ref, onMounted } from 'vue'
 
 import { getExperts, searchExperts } from '~/api/Experts'
+<<<<<<< HEAD
 import Expert from '../model/Expert.ts'
 import avatar from '/avatar.jpg'
+=======
+import Expert from '~/model/Expert'
+import avatar from '/avatar.jpg';
+
+
+>>>>>>> Huong
 
 // import FormExpert from './components/Main.vue'
 
@@ -77,6 +140,7 @@ const getSuggest = async () => {
 
 onMounted(async () => {
   experts.value = await getExperts()
+  //  experts.value = await getExpertsField()
 })
 </script>
 
@@ -94,7 +158,7 @@ onMounted(async () => {
   overflow-x: auto;
 
   width: 1350px;
-  height: 1010px;
+  height: auto;
   left: 57px;
   top: 784px;
 
@@ -114,7 +178,7 @@ onMounted(async () => {
   overflow-x: auto;
 
   width: 1350px;
-  height: 870px;
+  height: 1050px;
   left: 57px;
   top: 784px;
 
@@ -133,8 +197,8 @@ onMounted(async () => {
   user-select: none;
   overflow-x: auto;
 
-  width: 1350px;
-  height: 650px;
+  width: auto;
+  height: auto;
   left: 57px;
   top: 784px;
 
@@ -184,6 +248,7 @@ onMounted(async () => {
     'advert footer footer';
   /* Only change code above this line */
 }
+
 .container-field {
   font-size: 40px;
   min-height: 300px;
@@ -202,7 +267,7 @@ onMounted(async () => {
   /* align-items: center;
   text-align: center; */
 }
-.container-news{
+.container-news {
   font-size: 40px;
   min-height: 300px;
   width: 80%;
@@ -210,7 +275,7 @@ onMounted(async () => {
   /* margin-right: 30px; */
   display: grid;
   grid-template-columns: 430px 430px 430px;
-  grid-template-rows: 280px  ;
+  grid-template-rows: 280px;
   grid-gap: 10px;
   grid-template-areas:
     /* Only change code below this line */
@@ -229,6 +294,26 @@ onMounted(async () => {
   margin-top: 30px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   border-radius: 10px;
+ 
+}
+.img-expertsub{
+ width: 150px;
+  height: 180px;
+  margin-right: 20px;
+  top: 1061px;
+  margin-top: 30px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 10px;
+ 
+}
+.img-expert:hover {
+/* -webkit-transform: scale(0.8);
+-ms-transform: scale(0.8);
+transform: scale(0.8);
+transition: 1s ease; */
+
+transition: 1s ease;
+opacity: 0.5;
 }
 .img-field {
   width: 340px;
@@ -239,16 +324,14 @@ onMounted(async () => {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   border-radius: 10px;
 }
-.img-news{
-  
-
-width: 230px;
-height: 120px;
-left: 116px;
-padding-left: 20px;
-top: 0px;
-background: url(image.png);
-border-radius: 5px;
+.img-news {
+  width: 230px;
+  height: 120px;
+  left: 116px;
+  padding-left: 20px;
+  top: 0px;
+  background: url(image.png);
+  border-radius: 5px;
 }
 .expert-detail {
   position: relative;
@@ -293,64 +376,114 @@ height: 30px; */
 
   /* margin-bottom:0px; */
 }
-.news{
- background: #FFEFF5;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
-width: 400px;
-height:200px;
+.news {
+  background: #ffeff5;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  width: 400px;
+  height: 200px;
 }
-.text-news{
- 
-/* width: 385px;
+.text-news {
+  /* width: 385px;
 height: 48px;
 left: 116px;
 top: 2807px; */
-padding-left: 20px;
-padding-top: 10px;
-font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 22px;
-text-align: left;
-
-
-
-color: #000000;
-
-}
-.textsub{
- display: flex;
-margin-top: 10px;
-margin-left: 0px;
-padding-left: 6px;
+  padding-left: 20px;
+  padding-top: 10px;
   font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
- text-align: left;
-color: #000000;
-}
-.datenews{
-  padding-top: 65px;
-padding-left: 60px;
-font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 14px;
-line-height: 16px;
-display: flex;
-align-items: flex-end;
-text-align: right;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  text-align: left;
 
-color: #000000;
+  color: #000000;
 }
-.newsdetail{
+.textsub {
+  display: flex;
+  margin-top: 10px;
+  margin-left: 0px;
+  padding-left: 6px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: left;
+  color: #000000;
+}
+.datenews {
+  padding-top: 65px;
+  padding-left: 60px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: flex-end;
+  text-align: right;
+
+  color: #000000;
+}
+.newsdetail {
   padding-top: 15px;
   margin-top: 0px;
-   left: 590px;
-   text-align: center;
+  left: 590px;
+  text-align: center;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+ 
+}
 
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 340px;
+  
+  color: rgb(22, 17, 17);
+  text-align:center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 95%;  
+  left: 20%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+
+
+background: #FFEFF5;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+font-size: 24px;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+ -ms-transform: scaleY(1.5); /* IE 9 */
+  transform: scaleY(1.5);
+ 
+
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+.expert-detail{
+/* background: #ffeff5; */
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+  border-radius: 10px;
+  width: 300px;
+  height: 200px;
 }
 </style>
