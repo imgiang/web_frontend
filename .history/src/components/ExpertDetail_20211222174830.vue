@@ -1,5 +1,5 @@
 <template>
-<HeaderVue />
+<HeaderVue/>
   <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css" />
   <div class="thumnail"> 
     <div class="link-thumnail">
@@ -131,7 +131,6 @@
         </div>
         </div>
     </div>
-    
 </template>
 
 <script setup lang="ts">

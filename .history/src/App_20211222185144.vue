@@ -1,5 +1,5 @@
 <template>
-<mainHomeVue />
+<ExpertInfoVue/>
 <!-- <HelloWorldVue/> -->
   <!-- <MainHome   />
   <BaseHeader />
@@ -31,7 +31,7 @@ import avatar from '/avatar.jpg';
 import ExpertDetailVue from './components/ExpertDetail.vue';
 import HeaderVue from './components/layouts/homeFragment/Header.vue';
 import ExpertInfoVue from './components/ExpertInfo.vue';
-import mainHomeVue from './components/layouts/homeFragment/mainHome.vue';
+
 const experts = ref<Expert[]>([])
 const search = ref('')
 

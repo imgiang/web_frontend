@@ -1,5 +1,5 @@
 <template>
-<HeaderVue />
+<mainHomeVue/>
   <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css" />
   <div class="thumnail"> 
     <div class="link-thumnail">
@@ -135,7 +135,7 @@
 </template>
 
 <script setup lang="ts">
-import HeaderVue from './layouts/homeFragment/Header.vue';
+import mainHomeVue from './layouts/homeFragment/mainHome.vue';
 </script>
 
 <style scoped lang="css">

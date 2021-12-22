@@ -1,9 +1,8 @@
 <template>
 <div class="main">
     <search-vue />
-    
+    <ExpertDetailVue/>
 </div>
-<ExpertDetailVue/>
 </template>
 <script setup lang="ts">
 import searchVue from './search.vue';

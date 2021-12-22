@@ -1,22 +1,20 @@
 <template>
-
+<HeaderVue />
 <div class="main">
     <searchVue />
   <el-row :gutter="20" style="width: 90%">
     <el-col :span="24" :offset="2" class="compo-color">
     <div class="grid-content ">
+        
     </div>
     </el-col>
   </el-row>
                    
 </div>
-        <ExpertDetailVue/>
-
 </template>
 <script setup lang="ts">
 import HeaderVue from './layouts/homeFragment/Header.vue';
 import searchVue from './layouts/homeFragment/search.vue';
-import ExpertDetailVue from './ExpertDetail.vue';
 </script>
 <style lang="scss">
 .compo-color{

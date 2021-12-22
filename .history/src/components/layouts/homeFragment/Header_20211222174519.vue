@@ -24,11 +24,8 @@
     <button class="dropbtn">Home</button>
   </div>
 </div>
-
 </template>
-<script setup lang="ts">
-// import ExpertDetailVue from '~/components/ExpertDetail.vue';
-</script>
+
 <style>
 .background{
   height: 548px;

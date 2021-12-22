@@ -1,7 +1,7 @@
 .container{
 display: flex;
 margin: 20px;
-width: 80%;
+width: 90%;
 margin: auto;
 margin-top: 20px;
 }
@@ -20,18 +20,17 @@ border-radius: 10px;
 
 }
 .new-right{
-  
+  position:relative;
     margin:10px 10px 0px 10px;
      flex:3;
      height: 870px;
-     
+     top: 0px;
 }
 .item{
-    position:static;
     width: auto;
     margin-left:10px;
-    width: 910px;
-height: 500px;
+    /* width: 910px; */
+/* height: 493px; */
 left: 9px;
 top: 19px;
 
@@ -42,16 +41,12 @@ border-radius: 10px;
 
 .item1{
     
-    width: 910px;
-    height: 330px;
-    left: 0px;
-    margin-top: 545px;
-    margin-left: 30px;
-    top: 300px;
-    
-    background: #D1E0DB;
-    border-radius: 10px;
-
+    margin-top:45px;
+    margin-left:10px;
+    /* width: 905px; */
+height: 354px;
+left: 0px;
+top: 0px;
 
 background:  #D1E0DB;
 border-radius: 10px;

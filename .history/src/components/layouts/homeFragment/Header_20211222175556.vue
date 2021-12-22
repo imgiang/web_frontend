@@ -24,16 +24,16 @@
     <button class="dropbtn">Home</button>
   </div>
 </div>
-
+<ExpertDetailVue/>
 </template>
 <script setup lang="ts">
-// import ExpertDetailVue from '~/components/ExpertDetail.vue';
+import ExpertDetailVue from '~/components/ExpertDetail.vue';
 </script>
 <style>
-.background{
+/* .background{
   height: 548px;
   width: 100%;
-}
+} */
 .top {
   left: 30px;
   position: absolute;
