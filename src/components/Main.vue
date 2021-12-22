@@ -60,21 +60,18 @@
 import BaseHeader from './components/layouts/BaseHeader.vue'
 import HelloWorld from './components/HelloWorld.vue'
 import { ref, onMounted } from 'vue'
-
 import { getExperts, searchExperts } from '~/api/Experts'
-import Expert from '../model/Expert.ts'
+
+import Expert from '../model/Expert'
+
 import avatar from '/avatar.jpg'
-
-// import FormExpert from './components/Main.vue'
-
+ import FormExpert from './components/Main.vue'
 const experts = ref<Expert[]>([])
 const search = ref('')
-
 const getSuggest = async () => {
   console.log(search.value)
   experts.value = await searchExperts(search.value)
 }
-
 onMounted(async () => {
   experts.value = await getExperts()
 })
@@ -85,19 +82,16 @@ onMounted(async () => {
 .frm-field {
   font-family: sans-serif;
   border: 1px solid #eee;
-
   padding: 20px 30px;
   margin-top: 100px;
   margin-left: 55px;
   margin-bottom: 40px;
   user-select: none;
   overflow-x: auto;
-
   width: 1350px;
   height: 1010px;
   left: 57px;
   top: 784px;
-
   background: #f8dae9;
   border-radius: 20px;
   text-align: center;
@@ -105,19 +99,16 @@ onMounted(async () => {
 .frm-expert {
   font-family: sans-serif;
   border: 1px solid #eee;
-
   padding: 20px 30px;
   margin-top: 100px;
   margin-left: 55px;
   margin-bottom: 40px;
   user-select: none;
   overflow-x: auto;
-
   width: 1350px;
   height: 870px;
   left: 57px;
   top: 784px;
-
   background: #f8dae9;
   border-radius: 20px;
   text-align: center;
@@ -125,19 +116,16 @@ onMounted(async () => {
 .frm-news {
   font-family: sans-serif;
   border: 1px solid #eee;
-
   padding: 20px 30px;
   margin-top: 100px;
   margin-left: 55px;
   margin-bottom: 40px;
   user-select: none;
   overflow-x: auto;
-
   width: 1350px;
   height: 650px;
   left: 57px;
   top: 784px;
-
   background: #f8dae9;
   border-radius: 20px;
   text-align: center;
@@ -148,7 +136,6 @@ onMounted(async () => {
   height: 80px;
   left: 609px;
   /* top: 784px; */
-
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -157,7 +144,6 @@ onMounted(async () => {
   display: flex;
   align-items: center;
   text-align: center;
-
   color: #000000;
 }
 /* .i {
@@ -241,7 +227,6 @@ onMounted(async () => {
 }
 .img-news{
   
-
 width: 230px;
 height: 120px;
 left: 116px;
@@ -256,7 +241,6 @@ border-radius: 5px;
   /* height: 90px; */
   left: 600px;
   /* top: 784px; */
-
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -274,7 +258,6 @@ height: 30px; */
   /* left: 206px; */
   /* top: 1903px; */
   margin-left: 150px;
-
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -283,14 +266,12 @@ height: 30px; */
   display: flex;
   align-items: center;
   text-align: center;
-
   color: #000000;
 }
 .detail {
   padding-top: 20px;
   margin-top: 8px;
   text-align: center;
-
   /* margin-bottom:0px; */
 }
 .news{
@@ -313,11 +294,7 @@ font-style: normal;
 font-weight: normal;
 font-size: 22px;
 text-align: left;
-
-
-
 color: #000000;
-
 }
 .textsub{
  display: flex;
@@ -343,7 +320,6 @@ line-height: 16px;
 display: flex;
 align-items: flex-end;
 text-align: right;
-
 color: #000000;
 }
 .newsdetail{
@@ -351,6 +327,5 @@ color: #000000;
   margin-top: 0px;
    left: 590px;
    text-align: center;
-
 }
 </style>
