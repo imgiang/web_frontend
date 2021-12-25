@@ -62,7 +62,7 @@ import HelloWorld from './components/HelloWorld.vue'
 import { ref, onMounted } from 'vue'
 
 import { getExperts, searchExperts } from '~/api/Experts'
-import Expert from '../model/Expert.ts'
+import Expert from '../model/Expert'
 import avatar from '/avatar.jpg'
 
 // import FormExpert from './components/Main.vue'
