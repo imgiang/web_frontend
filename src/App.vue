@@ -1,6 +1,8 @@
 <template>
-  <MainHome   />
-  
+  <SearchExperts />
+  <FilterExperts />
+
+  <!-- <MainHome /> -->
   <!-- <BaseHeader /> -->
   <!-- <img alt="Vue logo" class="element-plus-logo" src="./assets/logo.png" /> -->
   <!-- <HelloWorld msg="Hello Vue 3.0 + Element Plus + Vite" /> -->
@@ -15,7 +17,7 @@
     <img :src="expert._source.thumbnail ? expert._source.thumbnail : avatar" :alt="expert._source.name + ' image'" />
     {{ expert._source.name }}
   </div> -->
-  <Footer />
+  <!-- <Footer /> -->
 </template>
 
 <script setup lang="ts">
@@ -25,10 +27,12 @@ import { ref, onMounted } from 'vue'
 
 import { getExperts, searchExperts } from '~/api/Experts'
 import Expert from './model/Expert'
-import avatar from '/avatar.jpg';
-import MainHome   from './components/Main.vue'
+import avatar from '/avatar.jpg'
+import MainHome from './components/Main.vue'
 
 import Footer from './components/Footer.vue'
+import SearchExperts from './components/SearchExperts.vue'
+import FilterExperts from './components/FilterExperts.vue'
 
 const experts = ref<Expert[]>([])
 const search = ref('')
