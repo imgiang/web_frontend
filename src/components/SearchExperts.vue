@@ -9,22 +9,19 @@
           class="w-100"
           placeholder="Name or Industry"
           :clearable="true"
-        >
-          <template #prefix>
-            <span>
-              <el-icon style="font-size: 18px"><User /></el-icon>
-            </span>
-          </template>
-        </el-autocomplete>
+          :prefix-icon="User"
+        />
       </el-col>
       <el-col :xs="24" :md="10" class="p-3">
         <div>Find Where?</div>
-        <el-autocomplete v-model="where" :fetch-suggestions="whereSearch" class="w-100" placeholder="Country, City">
-          <template #prefix>
-            <span>
-              <el-icon style="font-size: 18px"><MapLocation /></el-icon>
-            </span> </template
-        ></el-autocomplete>
+        <el-autocomplete
+          v-model="where"
+          :fetch-suggestions="whereSearch"
+          class="w-100"
+          placeholder="Country, City"
+          :clearable="true"
+          :prefix-icon="User"
+        />
       </el-col>
       <el-col :xs="24" :md="4" class="p-3">
         <el-button type="success" class="w-100"
@@ -61,5 +58,13 @@ const whatSearch = async (queryString: string, cb: (arg: any) => void) => {
   }
   cb(suggest.value)
 }
-const whereSearch = (queryString: string, cb: (arg: any) => void) => {}
+const whereSearch = (queryString: string, cb: (arg: any) => void) => {
+  const arr = [1, 2, 3]
+  cb(
+    arr.map(i => ({
+      value: i,
+      label: i
+    }))
+  )
+}
 </script>
