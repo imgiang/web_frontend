@@ -57,8 +57,6 @@
 </template>
 
 <script setup lang="ts">
-import BaseHeader from './components/layouts/BaseHeader.vue'
-import HelloWorld from './components/HelloWorld.vue'
 import { ref, onMounted } from 'vue'
 
 import { getExperts, searchExperts } from '~/api/Experts'
