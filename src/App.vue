@@ -1,59 +1,34 @@
 <template>
- 
-  <FQAs />
-  <!-- <BaseHeader /> -->
-  <!-- <img alt="Vue logo" class="element-plus-logo" src="./assets/logo.png" /> -->
-  <!-- <HelloWorld msg="Hello Vue 3.0 + Element Plus + Vite" /> -->
-
-  <!-- <label for="search">Search</label>
-  <input id="search" v-model="search" @input="getSuggest" /> -->
-  <!-- <div v-for="expert in experts" :key="expert._id">
-    <img :src="expert._source.thumbnail ? expert._source.thumbnail : avatar" :alt="expert._source.name + ' image'" />
-    {{ expert._source.name }}
-  </div> -->
-  <!-- <div v-for="expert in experts" :key="expert._id">
-    <img :src="expert._source.thumbnail ? expert._source.thumbnail : avatar" :alt="expert._source.name + ' image'" />
-    {{ expert._source.name }}
-  </div> -->
-  <Footer />
+  <FillInfo />
+  <Ahihi />
 </template>
 
 <script setup lang="ts">
-import BaseHeader from './components/layouts/BaseHeader.vue'
-// import HelloWorld from './components/HelloWorld.vue'
-import { ref, onMounted } from 'vue'
-
-import { getExperts, searchExperts } from '~/api/Experts'
-import Expert from './model/Expert'
-import avatar from '/avatar.jpg';
-// import MainHome   from './components/Main.vue'
-
-import Footer from './components/Footer.vue'
-import FQAs from'./components/FQAs.vue'
-
-const experts = ref<Expert[]>([])
-const search = ref('')
-
-const getSuggest = async () => {
-  console.log(search.value)
-  experts.value = await searchExperts(search.value)
-}
-
-onMounted(async () => {
-  experts.value = await getExperts()
-})
-
+import FillInfo from './components/FillInfo.vue'
+import Ahihi from './components/ahihi.vue'
+// import test2Vue from './components/test2.vue'
+// import HeaderVue from './components/layouts/homeFragment/Header.vue'
+// import Header from './components/layouts/homeFragment/Header.vue'
+// import LoginForUsVue from './components/LoginForUs.vue'
+// import ExpertInfoVue from './components/views/ExpertInfo.vue'
+// import ahihi from './components/views/FQAs.vue'
+// import headVue from './components/layouts/homeFragment/head.vue'
+// import Search from './components/layouts/homeFragment/search.vue'
+// import FQAs from './components/views/FQAs.vue'
+// import * as Module from 'module';
+// import Header from './components/layouts/homeFragment/Header.vue'
+// import Header from './components/layouts/homeFragment/Header.vue'
 </script>
 
-<style>
+<style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Roboto;
+  // background-color: rgb(41, 26, 26);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /*text-align: center;*/
-  /*color: #2c3e50;*/
-}
-.element-plus-logo {
-  width: 50%;
+  // color: #2c3e50;
+  // height: 1000px;
+  background-color: #e5e5e5;
 }
 </style>

@@ -45,7 +45,9 @@
   </body>
 </template>
 <script lang="ts">
-// import * as Module from 'module';
+export default {
+  name: 'LoginForUS'
+}
 </script>
 <style lang="scss">
 * {
