@@ -130,7 +130,6 @@
 
 <script  lang="ts">
 import { ref, onMounted } from 'vue'
-
 import { getExperts, searchExperts } from '~/api/Experts'
 import Expert from '~/model/Expert'
 import avatar from '/avatar.jpg'
