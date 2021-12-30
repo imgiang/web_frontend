@@ -92,14 +92,13 @@
       <button class="nav-dropbtn">Home</button>
     </div>
   </div>
-  <img class="nav-img" src="src/assets/carousel.png" alt="" />
+  <img :src="carouselImage" alt="" class="nav-img" />
+  <!-- <img class="nav-img" src="src/assets/carousel.png" alt="" /> -->
 </template>
-<!-- 
-<script lang="ts">
-export default {
-  name: 'HeaderVue'
-}
-</script> -->
+
+<script setup lang="ts">
+import carouselImage from '../../../assets/carousel.png'
+</script>
 
 <style>
 * {
