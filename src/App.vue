@@ -1,5 +1,4 @@
 <template>
-  <SearchExperts />
   <MainHome />
   <Footer />
 </template>
@@ -7,7 +6,6 @@
 <script setup lang="ts">
 import MainHome from './components/Main.vue'
 import Footer from './components/Footer.vue'
-import SearchExperts from './components/SearchExperts.vue'
 </script>
 
 <style>
