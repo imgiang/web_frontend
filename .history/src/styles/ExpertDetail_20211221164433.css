@@ -1,0 +1,7 @@
+.container{
+display: flex;
+}
+.new{
+    background-color: rgb(231, 136, 12);
+    margin:20px;
+}

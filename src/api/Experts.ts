@@ -3,7 +3,7 @@ import Expert from '~/model/Expert'
 
 const apiUrl = 'experts'
 
-export const getExperts = async (page = 0, size = 20, sort = 'name', asc = true): Promise<Expert[]> => {
+export const getExperts = async (page = 0, size = 30, sort = 'name', asc = true): Promise<Expert[]> => {
   try {
     const res = await axios.get(apiUrl, {
       params: {
@@ -34,6 +34,15 @@ export const searchExperts = async (what: string): Promise<Expert[]> => {
     return res.data
   } catch (error) {
     throw new Error('Failed to load experts')
+  }
+}
+
+export const fieldsExperts = async () => {
+  try {
+    const res = await axios.get(`${apiUrl}/field`)
+    return res.data
+  } catch (error) {
+    throw new Error()
   }
 }
 
