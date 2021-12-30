@@ -15,20 +15,26 @@
     <img :src="expert._source.thumbnail ? expert._source.thumbnail : avatar" :alt="expert._source.name + ' image'" />
     {{ expert._source.name }}
   </div> -->
+  <Results />
+  <Related_expert />
   <Footer />
 </template>
 
 <script setup lang="ts">
 import BaseHeader from './components/layouts/BaseHeader.vue'
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
 import { ref, onMounted } from 'vue'
 
 import { getExperts, searchExperts } from '~/api/Experts'
 import Expert from './model/Expert'
 import avatar from '/avatar.jpg';
-import MainHome   from './components/Main.vue'
+// import MainHome   from './components/Main.vue'
 
 import Footer from './components/Footer.vue'
+// import Related_expert from './components/Related_expert.vue';
+
+import Related_expert from './components/Related_expert.vue'
+import Results from './components/Results.vue'
 
 const experts = ref<Expert[]>([])
 const search = ref('')

@@ -1,5 +1,6 @@
+/* eslint-disable */
 <template>
-   <div class="footer">
+   <div class="footer"> 
       <div class="cover">
         <div class="item">
           <div class="item-title">Feature</div>
@@ -68,18 +69,24 @@
     </div>
 </template>
 
+<script>
+export default {
+  name: 'Footer'
+}
+</script>
 
 <style scoped>
+
+.footer
+
 .footer {
-        background-color: #f8dae9;
-        position: relative;
+        background-color: #FFFFFF;
+        position: absolute;
         width: 100%;
         height: 250px;
         box-sizing: border-box;
         display: block;
         margin: auto;
-        text-align: left;
-        /* font-style: italic; */
       }
 
       .cover {
@@ -87,7 +94,6 @@
         -webkit-box-pack: justify;
         justify-content: space-between;
         box-sizing: border-box;
-        position: relative;
         margin: 0 100px;
       }
       .item {
@@ -107,19 +113,22 @@
         font-size: 25px;
         line-height: 2.5;
         font-weight: 700;
+        text-align: left;
       }
 
       .item-text:hover {
-        color: #f46ea3;
+        color: #838BED;
         text-decoration: none;
       }
 
       .item-text {
         text-decoration: none;
         color: #555555;
+        text-align: left;
       }
 
       .bi{
-          margin-right: 5px;
-      }
+        margin-right: 5px;
+        box-sizing: border-box;
+      } 
 </style>
