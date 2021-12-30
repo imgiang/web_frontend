@@ -37,6 +37,15 @@ export const searchExperts = async (what: string): Promise<Expert[]> => {
   }
 }
 
+export const fieldsExperts = async () => {
+  try {
+    const res = await axios.get(`${apiUrl}/field`)
+    return res.data
+  } catch (error) {
+    throw new Error()
+  }
+}
+
 export const deleteExpertById = async (id: string): Promise<boolean> => {
   try {
     const res = await axios.delete(`${apiUrl}/${id}`)

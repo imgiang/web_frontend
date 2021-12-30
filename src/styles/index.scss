@@ -16,6 +16,7 @@ code {
   background-color: var(--el-color-primary-light-9);
   color: var(--el-color-primary);
 }
+
 .main {
   position: relative;
   margin-top: -40px;
@@ -25,4 +26,12 @@ code {
   width: 95%;
   left: 1cm;
   margin-bottom: 50px;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.p-3 {
+  padding: 10px;
 }

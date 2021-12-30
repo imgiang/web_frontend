@@ -1,78 +1,19 @@
 <template>
-<<<<<<< HEAD
-  <MainHome   />
-  
-  <!-- <BaseHeader /> -->
-  <!-- <img alt="Vue logo" class="element-plus-logo" src="./assets/logo.png" /> -->
-  <!-- <HelloWorld msg="Hello Vue 3.0 + Element Plus + Vite" /> -->
-
-  <!-- <label for="search">Search</label>
-=======
-<mainHomeVue />
-<!-- <HelloWorldVue/> -->
-  <!-- <MainHome   />
-  <BaseHeader />
-  <img alt="Vue logo" class="element-plus-logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3.0 + Element Plus + Vite" />
-  <label for="search">Search</label>
->>>>>>> Huong
-  <input id="search" v-model="search" @input="getSuggest" /> -->
-  <!-- <div v-for="expert in experts" :key="expert._id">
-    <img :src="expert._source.thumbnail ? expert._source.thumbnail : avatar" :alt="expert._source.name + ' image'" />
-    {{ expert._source.name }}
-  </div> -->
-  <!-- <div v-for="expert in experts" :key="expert._id">
-    <img :src="expert._source.thumbnail ? expert._source.thumbnail : avatar" :alt="expert._source.name + ' image'" />
-    {{ expert._source.google_scholar_fields.fields }}
-  </div> -->
+  <MainHome />
   <Footer />
 </template>
 
 <script setup lang="ts">
-// import BaseHeader from './components/layouts/BaseHeader.vue'
-// // import HelloWorld from './components/HelloWorld.vue'
-// import HelloWorldVue from './components/HelloWorld.vue'
-
-import { ref, onMounted } from 'vue'
-
-import { getExperts, searchExperts } from '~/api/Experts'
-import Expert from './model/Expert'
-import avatar from '/avatar.jpg';
-<<<<<<< HEAD
-import MainHome   from './components/Main.vue'
-
+import MainHome from './components/Main.vue'
 import Footer from './components/Footer.vue'
-
-=======
-//  import MainHome   from './components/Main.vue'
-import ExpertDetailVue from './components/ExpertDetail.vue';
-import HeaderVue from './components/layouts/homeFragment/Header.vue';
-import ExpertInfoVue from './components/ExpertInfo.vue';
-import mainHomeVue from './components/layouts/homeFragment/mainHome.vue';
->>>>>>> Huong
-const experts = ref<Expert[]>([])
-const search = ref('')
-
-const getSuggest = async () => {
-  console.log(search.value)
-  experts.value = await searchExperts(search.value)
-}
-
-onMounted(async () => {
-  experts.value = await getExperts()
-})
 </script>
 
-<style >
+<style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  /* text-align: center; */
   color: #2c3e50;
 }
-.element-plus-logo {
-  width: 50%;
-}
-
 </style>
