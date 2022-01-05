@@ -1,11 +1,10 @@
 <template>
   <FillInfo />
-  <Ahihi />
+  <!-- <Ahihi /> -->
 </template>
 
 <script setup lang="ts">
 import FillInfo from './components/FillInfo.vue'
-import Ahihi from './components/ahihi.vue'
 // import test2Vue from './components/test2.vue'
 // import HeaderVue from './components/layouts/homeFragment/Header.vue'
 // import Header from './components/layouts/homeFragment/Header.vue'

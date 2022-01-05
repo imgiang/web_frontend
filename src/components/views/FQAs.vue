@@ -55,11 +55,12 @@
   </div>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 // import HeaderVue from '../layouts/homeFragment/Header.vue'
 import HeaderVue from '../layouts/homeFragment/Header.vue'
 import Footer from '../layouts/homeFragment/Footer.vue'
 import Search from '../layouts/homeFragment/search.vue'
+let types: [{ name: 'Question 1' }, { name: 'Question 2' }, { name: 'Question 3' }]
 // export default {
 //   name: 'FQAs',
 //   data() {

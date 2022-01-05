@@ -20,7 +20,7 @@
       <div class="expertInfoForm">
         <div class="infor_necessary">
           <div class="infor_necessary-left">
-            <img :src="carouselImage" alt="" class="info_avatar" />
+            <img :src="avatarImage" alt="" class="info_avatar" />
             <!-- <img class="info_avatar" src="src\assets\avatar.jpg" alt="" /> -->
             <button class="btn_upload-photo">Upload Photo</button>
           </div>
@@ -112,7 +112,7 @@
 </template>
 <script setup lang="ts">
 import { ref } from 'vue'
-import carouselImage from '../assets/avatar.jpg'
+import avatarImage from '../assets/avatar.jpg'
 import HeaderVue from './layouts/homeFragment/Header.vue'
 import FooterVue from './layouts/homeFragment/Footer.vue'
 let exInfo = ref(true)

@@ -1,3 +1,4 @@
+/* eslint-disable */
 <template>
   <div class="footer">
     <div class="cover">
@@ -68,19 +69,17 @@
   </div>
 </template>
 
+<script setup lang="ts"></script>
+
 <style scoped>
-.footer {
-  background-color: #f8dae9;
-  /* position: relative; */
+.footer .footer {
+  background-color: #ffffff;
+  position: absolute;
   width: 100%;
   height: 250px;
   box-sizing: border-box;
-  /* display: block; */
-  /* margin: auto; */
-  text-align: left;
-  /* margin-bottom: 1px; */
-  /* font-style: italic; */
-  display: flex;
+  display: block;
+  margin: auto;
 }
 
 .cover {
@@ -88,7 +87,6 @@
   -webkit-box-pack: justify;
   justify-content: space-between;
   box-sizing: border-box;
-  position: relative;
   margin: 0 100px;
 }
 .item {
@@ -108,19 +106,22 @@
   font-size: 25px;
   line-height: 2.5;
   font-weight: 700;
+  text-align: left;
 }
 
 .item-text:hover {
-  color: #f46ea3;
+  color: #838bed;
   text-decoration: none;
 }
 
 .item-text {
   text-decoration: none;
   color: #555555;
+  text-align: left;
 }
 
 .bi {
   margin-right: 5px;
+  box-sizing: border-box;
 }
 </style>
